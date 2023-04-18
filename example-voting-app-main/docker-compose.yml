@@ -55,9 +55,9 @@ services:
     image: redis:alpine
     volumes:
       - "./healthchecks:/healthchecks"
-    # healthcheck:
-    #   test: /healthchecks/redis.sh
-    #   interval: "5s"
+    healthcheck:
+      test: /healthchecks/redis.sh
+      interval: "5s"
     networks:
       - back-tier
 
